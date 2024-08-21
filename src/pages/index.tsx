@@ -1,118 +1,207 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { FlipWords } from "@/components/ui/flip-words";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import React, { useEffect, useRef } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+export default function index() {
+  const words = ["Aralie", "Ayayie", "Ci Alie", "Abi"];
+  const text =
+    'aku bingung harus mulai darimana, tapi yang pertama aku ingin berterima kasih untuk segalanya, mungkin terasa lebay tapi percayalah keberadaan kamu disini adalah alasan aku untuk terus mendukung grup ini. Semenjak oshiku udah ngga disini, Hasrat untuk melanjutkan idoling ini menjadi terasa hambar, ada 50+ lebih member tapi gaada satupun yang click. \nSampe akhirnya gen 12 shonichi setlist Aitakatta... di unit song Shounan akhirnya aku pertama kali ngeliat kamu perform dan ngebawain US Shounan dengan suara kamu yang inndaaahhh banget. Saat itu aku langsung terbenak dihati "akhirnya ada lagi member dengan suara sekeren ini". Dan sejak itu aku semakin ngepoin kegiatan-kegiatan dan live kamu. Sifat kamu yang lembut, sopan, dan malu-malu itu ngebuat aku menjadi semakin asdfghjkl. Dan inilah yang akhirnya ngebuat aku semangat buat ngidol lagi, semangat buat terus dukung kamu dan grup ini, semangat buat liat kamu untuk terus berproses, semangat buat aku terus nungguin update dari kamu, semangat buat nungguin momen kamu untuk nyanyi lagi. Dan aku percaya kamu adalah member yang bisa dipercaya. Kamu adalah orang yang baik. Aku bisa bilang itu setelah mendengar cerita-cerita kamu. Kamu rela menyempatkan waktu untuk update di sela-sela kegiatan sekolah. Dan yang paling aku inget itu Waktu kamu jadi panitia mpls wkwkwk. Ngedengerin cerita Waktu ngejagain adik-adik jadi bring back memories Waktu aku juga masih mpls. Gatau kenapa aku jadi ngebayangin balik ke mpls lagi  dan dijagain sama kakak osis yang canggung ini. Tapi apadaya aku lahir 5 tahun kecepetan hehe. Semangat berproses ya adikkk, jalan kamu disini masih panjang, teruslah menjadi orang yang baikkk, orang yang sweet yang kadang masih ngeselin wkwk, orang yang lucu dan semakin lucu kalo cerita berasa ngerap wkwkwk. Aku akan setia melihat proses-proses kamu, dan aku berjanji ke diri aku sendiri aku akan terus dukung grup selama kamu juga masih bertahan di grup ini. Dan terakhir Happy 16th birthday adikkuuuuu.......';
 
-export default function Home() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    const handleUserInteraction = () => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+      window.removeEventListener("click", handleUserInteraction);
+      window.removeEventListener("touchstart", handleUserInteraction);
+    };
+
+    window.addEventListener("click", handleUserInteraction);
+    window.addEventListener("touchstart", handleUserInteraction);
+
+    return () => {
+      window.removeEventListener("click", handleUserInteraction);
+      window.removeEventListener("touchstart", handleUserInteraction);
+    };
+  }, []);
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
+    <>
+      <audio autoPlay>
+        <source src="/backsong.mp3" type="audio/mp3" />
+      </audio>
+      <div className="font-urbanist relative bg-[#F7EBED] h-[100vh] flex w-screen text-pink-950">
+        <h1 className="text-3xl font-semibold inline-block self-center w-full text-center">
+          Hello
+          <FlipWords className="text-inherit" words={words} /> <br />
+        </h1>
+        <h2 className="absolute bottom-10 w-full text-center">
+          #Apre21Oshi disini 👇
+        </h2>
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          className="absolute top-7 left-7 animate-spin duration-5000"
+          src="/img1.png"
+          width={80}
+          height={80}
+          alt="1"
+        />
+        <Image
+          className="absolute top-7 right-7 animate-spin duration-5000 delay-100"
+          src="/img2.png"
+          width={80}
+          height={80}
+          alt="1"
+        />
+        <Image
+          className="absolute bottom-7 left-7 animate-spin duration-5000 delay-200"
+          src="/img3.png"
+          width={80}
+          height={80}
+          alt="1"
+        />
+        <Image
+          className="absolute bottom-7 right-7 animate-spin duration-5000 delay-300"
+          src="/img4.png"
+          width={80}
+          height={80}
+          alt="1"
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="bg-[#F7EBED] p-10 font-extralight italic font-urbanist overflow-hidden relative pb-20">
+        <TextGenerateEffect
+          className="z-10 relative font-light text-xs md:text-lg overflow-hidden"
+          words={text}
+        />
+        <div className="z-10 flex overflow-hidden gap-5 mt-10">
+          <div className="flex gap-5 animate-infinity-slide flex-shrink-0 overflow-hidden">
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie1.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie2.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie3.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie4.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie5.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie6.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+          </div>
+          <div className="flex gap-5 overflow-hidden animate-infinity-slide flex-shrink-0">
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie1.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie2.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie3.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie4.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie5.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+            <Image
+              className="aspect-square object-cover object-center rounded"
+              src="/aralie6.png"
+              width={100}
+              height={100}
+              alt="aralie"
+            />
+          </div>
+        </div>
+        <div className="z-10 absolute left-0 right-0 bottom-0 h-10 flex justify-center">
+          <h1 className="font-montserrat font-light text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-900">
+            Created with ❤️ by Muhammad Mifta.
+          </h1>
+        </div>
+        <Image
+          className="absolute bottom-1/2 animate-irregular-move-1"
+          src="/img1.png"
+          width={80}
+          height={80}
+          alt="1"
+        />
+        <Image
+          className="absolute bottom-1/3 right-10 animate-irregular-move-2"
+          src="/img4.png"
+          width={80}
+          height={80}
+          alt="1"
+        />
+        <Image
+          className="absolute top-64 right-10 animate-irregular-move-3"
+          src="/img1.png"
+          width={80}
+          height={80}
+          alt="1"
+        />
+        <Image
+          className="absolute top-1/4 animate-irregular-move-1"
+          src="/img4.png"
+          width={80}
+          height={80}
+          alt="1"
+        />
       </div>
-    </main>
+    </>
   );
 }
