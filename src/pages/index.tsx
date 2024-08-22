@@ -8,7 +8,7 @@ import React, { useEffect, useRef } from "react";
 export default function index() {
   const words = ["Aralie", "Ayayie", "Ci Alie", "Abi"];
   const text =
-    'aku bingung harus mulai darimana, tapi yang pertama aku ingin berterima kasih untuk segalanya, mungkin terasa lebay tapi percayalah keberadaan kamu disini adalah alasan aku untuk terus mendukung grup ini. Semenjak oshiku udah ngga disini, Hasrat untuk melanjutkan idoling ini menjadi terasa hambar, ada 50+ lebih member tapi gaada satupun yang click. \nSampe akhirnya gen 12 shonichi setlist Aitakatta... di unit song Shounan akhirnya aku pertama kali ngeliat kamu perform dan ngebawain US Shounan dengan suara kamu yang inndaaahhh banget. Saat itu aku langsung terbenak dihati "akhirnya ada lagi member dengan suara sekeren ini". Dan sejak itu aku semakin ngepoin kegiatan-kegiatan dan live kamu. Sifat kamu yang lembut, sopan, dan malu-malu itu ngebuat aku menjadi semakin asdfghjkl. Dan inilah yang akhirnya ngebuat aku semangat buat ngidol lagi, semangat buat terus dukung kamu dan grup ini, semangat buat liat kamu untuk terus berproses, semangat buat aku terus nungguin update dari kamu, semangat buat nungguin momen kamu untuk nyanyi lagi. Dan aku percaya kamu adalah member yang bisa dipercaya. Kamu adalah orang yang baik. Aku bisa bilang itu setelah mendengar cerita-cerita kamu. Kamu rela menyempatkan waktu untuk update di sela-sela kegiatan sekolah. Dan yang paling aku inget itu Waktu kamu jadi panitia mpls wkwkwk. Ngedengerin cerita Waktu ngejagain adik-adik jadi bring back memories Waktu aku juga masih mpls. Gatau kenapa aku jadi ngebayangin balik ke mpls lagi  dan dijagain sama kakak osis yang canggung ini. Tapi apadaya aku lahir 5 tahun kecepetan hehe. Semangat berproses ya adikkk, jalan kamu disini masih panjang, teruslah menjadi orang yang baikkk, orang yang sweet yang kadang masih ngeselin wkwk, orang yang lucu dan semakin lucu kalo cerita berasa ngerap wkwkwk. Aku akan setia melihat proses-proses kamu, dan aku berjanji ke diri aku sendiri aku akan terus dukung grup selama kamu juga masih bertahan di grup ini. Dan terakhir Happy 16th birthday adikkuuuuu.......';
+    'aku bingung harus mulai darimana, tapi yang pertama aku ingin berterima kasih untuk segalanya, mungkin terasa lebay tapi percayalah keberadaan kamu disini adalah alasan aku untuk terus mendukung grup ini. Semenjak oshiku udah ngga disini, Hasrat untuk melanjutkan idoling ini menjadi terasa hambar, ada 50+ lebih member tapi gaada satupun yang click. Sampe akhirnya gen 12 shonichi setlist Aitakatta... di unit song Shounan akhirnya aku pertama kali ngeliat kamu perform dan ngebawain US Shounan dengan suara kamu yang inndaaahhh banget. Saat itu aku langsung terbenak dihati "akhirnya ada lagi member dengan suara sekeren ini". Dan sejak itu aku semakin ngepoin kegiatan-kegiatan dan live kamu. Sifat kamu yang lembut, sopan, dan malu-malu itu ngebuat aku menjadi semakin asdfghjkl. Dan inilah yang akhirnya ngebuat aku semangat buat ngidol lagi, semangat buat terus dukung kamu dan grup ini, semangat buat liat kamu untuk terus berproses, semangat buat aku terus nungguin update dari kamu, semangat buat nungguin momen kamu untuk nyanyi lagi. Dan aku percaya kamu adalah member yang bisa dipercaya. Kamu adalah orang yang baik. Aku bisa bilang itu setelah mendengar cerita-cerita kamu. Kamu rela menyempatkan waktu untuk update di sela-sela kegiatan sekolah. Dan yang paling aku inget itu Waktu kamu jadi panitia mpls wkwkwk. Ngedengerin cerita Waktu ngejagain adik-adik jadi bring back memories Waktu aku juga masih mpls. Gatau kenapa aku jadi ngebayangin balik ke mpls lagi  dan dijagain sama kakak osis yang canggung ini. Tapi apadaya aku lahir 5 tahun kecepetan hehe. Semangat berproses ya adikkk, jalan kamu disini masih panjang, teruslah menjadi orang yang baikkk, orang yang sweet yang kadang masih ngeselin wkwk, orang yang lucu dan semakin lucu kalo cerita berasa ngerap wkwkwk. Aku akan setia melihat proses-proses kamu, dan aku berjanji ke diri aku sendiri aku akan terus dukung grup selama kamu juga masih bertahan di grup ini. Dan terakhir Happy 16th birthday adikkuuuuu.......';
 
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -78,45 +78,45 @@ export default function index() {
           className="z-10 relative font-light text-xs md:text-lg overflow-hidden"
           words={text}
         />
-        <div className="z-10 flex overflow-hidden gap-5 mt-10">
-          <div className="flex gap-5 animate-infinity-slide flex-shrink-0 overflow-hidden">
+        <div className="z-10 flex overflow-hidden mt-10">
+          <div className="flex gap-5 animate-infinity-slide flex-shrink-0 overflow-hidden pr-5">
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie1.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie2.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie3.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie4.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie5.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie6.png"
               width={100}
               height={100}
@@ -125,42 +125,42 @@ export default function index() {
           </div>
           <div className="flex gap-5 overflow-hidden animate-infinity-slide flex-shrink-0">
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie1.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie2.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie3.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie4.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie5.png"
               width={100}
               height={100}
               alt="aralie"
             />
             <Image
-              className="aspect-square object-cover object-center rounded"
+              className="aspect-square md:h-64 md:w-64 object-cover object-center rounded"
               src="/aralie6.png"
               width={100}
               height={100}

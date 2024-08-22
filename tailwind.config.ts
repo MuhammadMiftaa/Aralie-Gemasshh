@@ -74,39 +74,39 @@ const config = {
         "irregular-move-1": {
           "0%": { transform: "translateX(0) translateY(0) rotate(0deg)" },
           "25%": {
-            transform: "translateX(50%) translateY(-50%) rotate(45deg)",
+            transform: "translateX(150%) translateY(-50%) rotate(45deg)",
           },
           "50%": {
-            transform: "translateX(100%) translateY(100%) rotate(90deg)",
+            transform: "translateX(300%) translateY(100%) rotate(90deg)",
           },
           "75%": {
-            transform: "translateX(-50%) translateY(50%) rotate(135deg)",
+            transform: "translateX(-100%) translateY(50%) rotate(135deg)",
           },
           "100%": { transform: "translateX(0) translateY(0) rotate(180deg)" },
         },
         "irregular-move-2": {
           "0%": { transform: "translateX(0) translateY(0) rotate(0deg)" },
           "25%": {
-            transform: "translateX(-50%) translateY(-50%) rotate(-45deg)",
+            transform: "translateX(-150%) translateY(-50%) rotate(-45deg)",
           },
           "50%": {
-            transform: "translateX(-100%) translateY(100%) rotate(-90deg)",
+            transform: "translateX(-300%) translateY(100%) rotate(-90deg)",
           },
           "75%": {
-            transform: "translateX(50%) translateY(50%) rotate(-135deg)",
+            transform: "translateX(100%) translateY(50%) rotate(-135deg)",
           },
           "100%": { transform: "translateX(0) translateY(0) rotate(-180deg)" },
         },
         "irregular-move-3": {
           "0%": { transform: "translateX(0) translateY(0) rotate(0deg)" },
           "25%": {
-            transform: "translateX(-50%) translateY(50%) rotate(-45deg)",
+            transform: "translateX(-150%) translateY(50%) rotate(-45deg)",
           },
           "50%": {
-            transform: "translateX(-100%) translateY(100%) rotate(-90deg)",
+            transform: "translateX(-300%) translateY(100%) rotate(-90deg)",
           },
           "75%": {
-            transform: "translateX(-50%) translateY(150%) rotate(-135deg)",
+            transform: "translateX(-100%) translateY(150%) rotate(-135deg)",
           },
           "100%": {
             transform: "translateX(0) translateY(200%) rotate(-180deg)",
